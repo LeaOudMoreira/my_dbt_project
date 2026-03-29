@@ -29,10 +29,8 @@ GROUP BY order_month
 ), shipping_cost AS (
 
 
-SELECT shipping_cost
-FROM sales_database.order_item
-WHERE price > 7000
 )
+``` Not use in the final query
 SELECT u.order_month,
 COALESCE(u.total_monthly_users,0) AS nb_users_monthly,
 COALESCE(jt.total_monthly_users_from_jawa_timur,0) AS total_monthly_user,
